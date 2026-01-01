@@ -1,0 +1,11 @@
+{
+  "balance": 1000,
+  "initial_balance": 1000,
+  "active_strategy": "martingale_light",
+  "stop_loss": 0.02,
+  "take_profit": 0.03,
+  "position_size": 0.5,
+  "is_running": true,
+  "current_position": null,
+  "last_update": "2026-01-01T09:44:37.021430"
+}

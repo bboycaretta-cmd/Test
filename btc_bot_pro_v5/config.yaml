@@ -1,0 +1,86 @@
+api:
+  binance_url: https://api.binance.com/api/v3
+  binance_ws: wss://stream.binance.com:9443/ws
+  max_retry: 3
+  rate_limit_per_minute: 1200
+  timeout: 10
+backtest:
+  default_months: 3
+  initial_balance: 10000.0
+  monte_carlo_runs: 100
+  random_seed: 42
+  realistic_fills: true
+  use_slippage: true
+  use_spread: true
+  walk_forward_windows: 5
+created_at: '2026-01-01T04:02:36.373470'
+database:
+  backup_enabled: true
+  backup_interval_hours: 24
+  cleanup_days: 90
+  path: data/btc_bot.db
+log:
+  backup_count: 5
+  console_output: true
+  file_output: true
+  json_format: true
+  level: INFO
+  max_size_mb: 10
+model:
+  batch_size: 64
+  coin: BTCUSDT
+  data_months: 12
+  dense_units: 16
+  dropout: 0.35
+  epochs: 150
+  gru_units_1: 64
+  gru_units_2: 32
+  l2_reg: 0.001
+  learning_rate: 0.0005
+  lookback_window: 48
+  patience: 15
+  prediction_horizon: 4
+  random_seed: 42
+  test_ratio: 0.15
+  threshold: 0.5
+  timeframe: 1h
+  train_ratio: 0.65
+  val_ratio: 0.2
+notification:
+  email_enabled: false
+  email_from: ''
+  email_smtp: ''
+  email_to: ''
+  notify_on_error: true
+  notify_on_signal: false
+  notify_on_trade: true
+  telegram_chat_id: ''
+  telegram_enabled: false
+  telegram_token: ''
+risk:
+  consecutive_loss_limit: 5
+  daily_loss_limit: 0.05
+  kelly_fraction: 0.25
+  max_drawdown_limit: 0.2
+  position_sizing_method: fixed_fractional
+  var_confidence: 0.95
+trading:
+  commission: 0.001
+  initial_balance: 10000.0
+  max_daily_loss: 0.05
+  max_position_size: 0.5
+  risk_per_trade: 0.02
+  slippage: 0.0005
+  spread: 0.0002
+  stop_loss: 0.02
+  take_profit: 0.03
+  trailing_enabled: true
+  trailing_stop: 0.015
+ui:
+  chart_candles: 50
+  currency: USD
+  refresh_rate_ms: 500
+  table_rows: 20
+  theme: default
+updated_at: '2026-01-01T04:02:36.373470'
+version: 5.0.0
